@@ -1,7 +1,7 @@
 name="Жгутиковые"
-print(name)
-print(name[0])
-print(name[-1])
-print(name[4:])
-print(name[::-1])
-print(name[0::2])
+print(name)       # Жгутиковые
+print(name[0])    # Ж
+print(name[-1])   # е
+print(name[4:])   # иковые
+print(name[::-1]) # еывокитугЖ
+print(name[0::2]) # Жуиоы
