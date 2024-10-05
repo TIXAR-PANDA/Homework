@@ -1,16 +1,32 @@
-# This is a sample Python script.
+# Ist program
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print(  )
+print( 'Первая задача:', 9 ** 0.5 * 5 )
+
+# 2nd program
+
+print( )
+print( '2-я задача: ', 9.99 > 9.98 and 1000 != 1000.1)
+
+# 3rd program
+
+print(  )
+print( '3-я задача:', 2 * 2 + 2, "равно",  2 * (2 + 2) ,  2 * 2 + 2 == 2* (2 + 2)  )
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# 4th program
+
+print(  )
+print( '4-я задача:')
+print( 'Вывести на экран первую цифру после запятой' )
+
+c = '123.456'
+print( c )
+print( int(float( c ) * 10) % 10 )
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
+
+
