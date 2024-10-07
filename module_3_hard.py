@@ -2,40 +2,50 @@
 
 
 def calculate_structure_sum(structure_):
+    print(structure_)
     n = len(structure_)
     ss = 0
     for i in range(0, n):
+        print ('    ', i )
+        print(structure_[i])
+        print(type(structure_[i]))
+
         if isinstance (structure_[i],dict):
-            '''идем к словарям----'''
+            print ('идем к словарям----')
             keys = list(structure_[i].keys())
             values_ = list(structure_[i].values())
             structure_dict = [keys,values_]
+            print(' ------------' ,structure_dict )
             ss1 = calculate_structure_sum(structure_dict)
             ss = ss + ss1
+            print('ss = ', ss)
         if isinstance(structure_[i], list):
-            '''идем к спискам-----'''
+            print('идем к спискам-----')
             ss1 = calculate_structure_sum(structure_[i])
             ss = ss +  ss1
-           
+            print ('ss = ', ss)
         if isinstance(structure_[i], int):
-            '''идем к числам '''
+            print('идем к числам')
             ss = ss + int(structure_[i])
+            print('ss = ', ss)
 
         if isinstance(structure_[i], str):
-           '''идем к строкам'''
+            print('идем к строкам')
             ss = ss + len(structure_[i])
+            print('ss = ', ss)
 
         if isinstance(structure_[i], tuple):
-           '''идем к кортежу'''
+            print('идем к кортежу')
             ss1 = calculate_structure_sum(structure_[i])
             ss = ss + ss1
 
             print('ss = ', ss)
         if isinstance(structure_[i], set ):
-            '''идем к множеству'''
+            print('идем к множеству')
             structure_1 = list (structure_[i])
             ss1 = calculate_structure_sum(structure_1)
             ss = ss + ss1
+    print ('rez = ', ss)
     return ss
 
 
