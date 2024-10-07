@@ -2,15 +2,11 @@
 
 
 def calculate_structure_sum(structure_):
-    print(structure_)
     n = len(structure_)
     ss = 0
     for i in range(0, n):
-        print ('    ', i )
-        print(structure_[i])
-        print(type(structure_[i]))
 
-        if isinstance (structure_[i],dict):
+       if isinstance (structure_[i],dict):
             print ('идем к словарям----')
             keys = list(structure_[i].keys())
             values_ = list(structure_[i].values())
