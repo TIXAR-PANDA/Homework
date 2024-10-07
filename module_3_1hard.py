@@ -12,8 +12,8 @@ def calculate_structure_sum(structure_):
             structure_dict = [keys,values_]
             ss1 = calculate_structure_sum(structure_dict)
             ss = ss + ss1
-        if isinstance(structure_[i], list):
-            #'идем к спискам-----'
+        if isinstance(structure_[i], (list , tuple)):
+            #'идем к спискам или к кортежу-----'
             ss1 = calculate_structure_sum(structure_[i])
             ss = ss +  ss1
 
@@ -25,10 +25,10 @@ def calculate_structure_sum(structure_):
             #'идем к строкам'
             ss = ss + len(structure_[i])
 
-        if isinstance(structure_[i], tuple):
+        #if isinstance(structure_[i], tuple):
             #'идем к кортежу'
-            ss1 = calculate_structure_sum(structure_[i])
-            ss = ss + ss1
+            #ss1 = calculate_structure_sum(structure_[i])
+            #ss = ss + ss1
 
         if isinstance(structure_[i], set ):
             #'идем к множеству'
