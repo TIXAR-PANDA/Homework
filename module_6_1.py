@@ -12,17 +12,17 @@ class  Animal:
         self.fed = False
 
     def __repr__(self):
-        return f'{self.name}'
+        return f'Животное {self.name}'
 
     def eat(self, food):
         """ Если животному дать съедобное растение, то животное насытится,
          если не съедобное - погибнет.
         """
         if food.edible is False:
-            print(f'{self} не стал есть {food} и умер от голода')
+            print(f'{self} не стало есть {food} и умерло от голода')
             self.alive = False
         else:
-            print(f'{self} cъел {food} и насытился')
+            print(f'{self} cъело {food} и насытилось')
             self.fed = True
             return
 
@@ -32,7 +32,7 @@ class  Mammal(Animal) :
 
 class Predator(Animal):
     """ Класс Predator - хищник. """
-    
+
 
 
 
@@ -46,7 +46,7 @@ class Plant:
 
 
     def __repr__(self):
-        return f'{self.name}'
+        return f'Растение {self.name}'
 
 
 class Flower(Plant):
@@ -63,14 +63,14 @@ a2 = Mammal('Хатико')
 p1 = Flower('Цветик семицветик')
 p2 = Fruit('Заводной апельсин')
 
-print(f'Животные:{a1}, {a2}')
-print(f'Растения: {p1}, {p2}')
+print(a1, a2)
+print(p1, p2)
 
-print(f' {a1} живой? >>> {a1.alive}')
-print(f' {a2} не голодный? >>> {a2.fed}')
-print(f' {p1} съедобный? >>> {p1.edible}')
-print(f' {p2} съедобный? >>> {p2.edible}')
+print(f' {a1} живое? >>> {a1.alive}')
+print(f' {a2} не голодное? >>> {a2.fed}')
+print(f' {p1} съедобное? >>> {p1.edible}')
+print(f' {p2} съедобное? >>> {p2.edible}')
 a1.eat(p1)
 a2.eat(p2)
-print(f' {a1} живой? >>> {a1.alive}')
-print(f' {a2} не голодный? >>> {a2.fed}')
+print(f' {a1} живое? >>> {a1.alive}')
+print(f' {a2} не голодное? >>> {a2.fed}')
